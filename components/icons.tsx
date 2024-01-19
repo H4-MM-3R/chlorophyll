@@ -5,11 +5,9 @@ import {
   Twitter,
   Instagram,
   FacebookIcon,
-  type Icon as LucideIcon,
   ArrowRight,
 } from "lucide-react"
 
-export type Icon = LucideIcon
 
 type IconProps = React.HTMLAttributes<SVGElement>
 

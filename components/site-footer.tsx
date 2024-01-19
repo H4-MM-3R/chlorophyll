@@ -13,7 +13,7 @@ export default function SiteFooter() {
       <div className="lg:flex w-auto px-8 pb-4 text-sm dark:border-neutral-700 ">
         <Link href="/">
         <div className="w-full flex justify-center items-center">
-          <div className="w-[200px] lg:w-[400px] mb-4">
+          <div className="w-[350px] lg:w-[400px] mb-4">
             <img src="/images/appLogo-removebg.png" alt="" />
           </div>
         </div>
