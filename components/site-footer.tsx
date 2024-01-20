@@ -8,9 +8,9 @@ import { buttonVariants } from "./ui/button"
 
 export default function SiteFooter() {
   return (
-    <footer className="relative w-full dark:bg-gradient-to-r dark:from-[#654120] dark:to-[#2c6e31] text-sm text-neutral-500 dark:text-neutral-400">
-      <div className="border-b border-accent-foreground w-full mx-auto mb-4"></div>
-      <div className="lg:flex w-auto px-8 pb-4 text-sm dark:border-neutral-700 ">
+    <footer className="relative w-screen dark:bg-gradient-to-r dark:from-[#654120] dark:to-[#2c6e31] text-sm text-neutral-500 dark:text-neutral-400 bottom-0 ">
+      <div className="border-b border-accent-foreground w-screen mx-auto mb-4 "></div>
+      <div className="lg:flex px-8 pb-4 text-sm dark:border-neutral-700 ">
         <Link href="/">
         <div className="w-full flex justify-center items-center">
           <div className="w-[350px] lg:w-[400px] mb-4">

@@ -23,11 +23,10 @@ export default function RootLayout({
                 )}
             >
                 <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-                    <div className="relative flex min-h-screen flex-col">
+                    <div className="relative flex min-h-screen flex-col overflow-hidden">
                         <SiteHeader />
                         <div className="flex-1">{children}</div>
                         <SiteFooter />
-                        <FloatingWhatsApp phoneNumber="9676425280" accountName="hemram" />
                     </div>
                 </ThemeProvider>
             </body>

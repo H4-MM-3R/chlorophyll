@@ -40,11 +40,12 @@ export function MobileNav() {
               onOpenChange={setOpen}
             >
               <div className="flex flex-col items-center space-y-4">
-                <div className="w-[119px] h-[64px] relative lg:hidden ">
+                <div className="relative lg:hidden">
                   <Image className="rounded-full"
                     src="/images/logoNew.png"
+                    width="119"
+                    height="64"
                     alt="logo"
-                    layout="fill"
                   />
                 </div>
               </div>

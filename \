@@ -6,13 +6,9 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { smallCarouselConfig } from "@/config/scarousel";
 import { siteConfig } from "@/config/site";
-import { fontItalic } from "@/lib/fonts";
-import { cn } from "@/lib/utils";
 import Autoplay from "embla-carousel-autoplay";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -60,11 +56,11 @@ export default function Home() {
           >
             <Link
               href="/aboutus"
-              className="group dark:shadow-white shadow-black shadow-inner h-10 py-2 px-4 inline-flex items-center justify-center rounded-md text-sm font-medium hover:text-white hover:bg-black dark:text-white hover:dark:bg-white hover:dark:text-black overflow-hidden transition-all duration-700"
+              className="dark:shadow-white shadow-black shadow-inner h-10 py-2 px-4 inline-flex items-center justify-center rounded-md text-sm font-medium hover:text-white hover:bg-black dark:text-white hover:dark:bg-white hover:dark:text-black overflow-hidden transition-all duration-700"
             >
               <div className="flex justify-center gap-1 items-center">
                 <span>More About Us</span>
-                <ArrowRight className="h-4 w-4 group-hover:scale-125 group-hover:translate-x-1 transition-transform duration-700" />
+                <ArrowRight className="w-4 h-4" />
               </div>
             </Link>
           </motion.div>
@@ -109,65 +105,60 @@ export default function Home() {
             Checkout our Products
           </h1>
 
-          <Link href="/products" className="group">
-            <motion.div whileHover={{ scale: 1.1 }}>
+          <Link href="/products">
+            <div>
               <Button variant="new">
-                <div className="flex justify-center items-center gap-1">
-                  <span>Explore our Products</span>
-                  <ArrowRight className="h-4 w-4 group-hover:scale-125 group-hover:translate-x-1 transition-transform duration-700" />
+                <div className="flex justify-center items-center gap-1 group">
+                  <h1>
+                    Explore our Products{" "}
+                    <span className="hidden group-hover:inline-block transition-transform group-hover:-2 motion-reduce:transform-none">
+                      -
+                    </span>
+                    <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                      -&gt;
+                    </span>
+                  </h1>
                 </div>
               </Button>
-            </motion.div>
+            </div>
           </Link>
         </div>
+
+        <a
+          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          className="group border border-transparent rounded-lg px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 className="mb-3 text-2xl font-semibold">
+            Learn{" "}
+            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span>
+          </h2>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            Learn about Next.js in an interactive course with&nbsp;quizzes!
+          </p>
+        </a>
+        <a
+          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+            Learn{" "}
+            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span>
+          </h2>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            Learn about Next.js in an interactive course with&nbsp;quizzes!
+          </p>
+        </a>
       </section>
 
       <SmallCarousel items={smallCarouselConfig.items} />
-
-      <section className="flex justify-center items-center flex-col lg:flex-row py-12 gap-4">
-        <div className="bg-stone-500/40 dark:bg-black/40 backdrop-blur aspect-square w-[300px] lg:w-[600px] flex-col flex justify-center gap-4 items-center rounded-xl">
-          <h1 className="lg:text-4xl text-2xl font-black leading-tighter tracking-tight text-center pb-12">
-            Explore the lush beauty of our Home gardening store.
-          </h1>
-          <p className=" px-4 text-center">
-            Each photo tells a story of growth, resilience, and the inherent
-            beauty of the natural world. Feel the therapeutic power of greenery
-            as you scroll through our gallery
-          </p>
-          <p className={cn("px-8 pb-12 text-center", fontItalic.className)}>
-            Visit us in-store to witness the magic in person and bring home a
-            piece of nature's artistry. Our passionate team is ready to assist
-            you in selecting the perfect additions to your garden, answering
-            questions, and sharing expert tips to ensure your plants thrive
-          </p>
-          <Link href="/gallery" className="group">
-            <motion.div whileHover={{ scale: 1.1 }}>
-              <Button className="bg-white dark:bg-transparent text-black dark:shadow-white shadow-black shadow-inner h-10 py-2 px-4 inline-flex items-center justify-center rounded-md text-sm font-medium hover:text-white hover:bg-black dark:text-white hover:dark:bg-white hover:dark:text-black overflow-hidden transition-all duration-700">
-                <div className="flex justify-center items-center gap-1">
-                  <span>Explore our Gallery</span>
-                  <ArrowRight className="h-4 w-4 group-hover:scale-125 group-hover:translate-x-1 transition-transform duration-700" />
-                </div>
-              </Button>
-            </motion.div>
-          </Link>
-        </div>
-
-        <div className="aspect-square w-[250px] sm:w-[600px] flex justify-center rounded-xl">
-          <div className="w-fit flex justify-center items-center">
-            <Carousel className="w-full max-w-sm">
-              <CarouselContent>
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <CarouselItem key={index}>
-                    <img src={galleryArray[index]} />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
