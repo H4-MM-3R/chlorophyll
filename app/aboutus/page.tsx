@@ -3,8 +3,9 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 
-import { fontItalic } from "@/lib/fonts"
+import { fontItalic, fontMono, fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
+
 
 export default function() {
   return (
