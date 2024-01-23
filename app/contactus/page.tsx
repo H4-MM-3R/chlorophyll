@@ -1,8 +1,6 @@
 "use client"
 
-import { AnimatePresence, motion } from "framer-motion"
-
-import { Card } from "@/components/ui/card"
+import { motion } from "framer-motion"
 
 import { UserAuthForm } from "./components/user-auth-form"
 
