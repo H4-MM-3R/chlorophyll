@@ -27,6 +27,7 @@ export default function RootLayout({
                         <SiteHeader />
                         <div className="flex-1">{children}</div>
                         <SiteFooter />
+                        <FloatingWhatsApp phoneNumber="9676425280" accountName="hemram" />
                     </div>
                 </ThemeProvider>
             </body>
